@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alen Thomas - Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Alen Thomas</h1>
+        <p>Web Developer & UI Designer</p>
+    </header>
+
+    <main>
+
+        <section id="bio" class="section">
+            <h2>About Me</h2>
+            <div class="bio-content">
+                <img src="images/profile.jpg" alt="Your Name in a professional headshot">
+                <p>
+                    I am a dedicated web developer with a passion for creating intuitive, high-quality digital experiences. 
+                    Proficient in HTML, CSS, and JavaScript, I specialize in building responsive, user-centered websites that blend functionality with elegant design.
+                </p>
+            </div>
+        </section>
+
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <article class="project" data-type="app">
+                    <img src="images/image2.jpg" alt="Courier Management System dashboard screenshot">
+                    <h3>Courier Management System</h3>
+                    <p>Developed a desktop application using Python and MySQL to manage courier deliveries, track packages, and handle logistics data efficiently.</p>
+                </article>
+        
+                <article class="project" data-type="web">
+                    <img src="images/image3.jpg" alt="Pizza website homepage screenshot">
+                    <h3>Pizza Website</h3>
+                    <p>A fully responsive website built using HTML and CSS to showcase a pizza shop’s menu, special offers, and contact form.</p>
+                </article>
+        
+                <article class="project" data-type="hardware">
+                    <img src="images/images.png" alt="Arduino-based referee panel prototype image">
+                    <h3>Automated Basketball Referee Panel</h3>
+                    <p>Created an Arduino Uno-based system to automate foul detection and game rule enforcement for basketball using sensor inputs.</p>
+                </article>
+                <article class="project" data-type="app">
+                    <img src="images/image4.png" alt="Project 4: Startup landing page screenshot">
+                    <h3>Launch Hub</h3>
+                    <p>An accessible landing page designed for a tech startup.                                                </p><br><br>
+                </article>
+            </div>
+        </section>
+
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Interested in collaborating? Connect with me via email or social media.</p>
+            <div class="contact-links">
+                <a href="mailto:alenthomas206@gmail.com" class="contact-link">Email</a>
+                <a href="https://www.linkedin.com/in/alen-thomas-91535b22b/" class="contact-link">LinkedIn</a>
+                <a href="https://github.com/alenthomas206" class="contact-link">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
